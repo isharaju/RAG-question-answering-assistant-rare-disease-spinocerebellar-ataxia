@@ -1,0 +1,75 @@
+[2025-06-22 20:06:24,423] INFO main:192 - ------ Command line arguments -------
+[2025-06-22 20:06:24,423] INFO main:193 - step                                              : step05_generate_response
+[2025-06-22 20:06:24,423] INFO main:194 - input_filename                                    : None
+[2025-06-22 20:06:24,423] INFO main:195 - query_args                                        : What are some biomarkers of spinocerebellar ataxia
+[2025-06-22 20:06:24,424] INFO main:196 - use_rag                                           : True
+[2025-06-22 20:06:24,424] INFO main:197 - ------ Config Settings -------
+[2025-06-22 20:06:24,424] INFO main:199 - cleaned_text_directory                            : data/cleaned_text
+[2025-06-22 20:06:24,424] INFO main:199 - collection_name                                   : collections
+[2025-06-22 20:06:24,424] INFO main:199 - embedding_model_name                              : sentence-transformers/all-MiniLM-L6-v2
+[2025-06-22 20:06:24,424] INFO main:199 - embeddings_directory                              : data/embeddings
+[2025-06-22 20:06:24,424] INFO main:199 - llm_api_url                                       : http://localhost:1234/v1/completions
+[2025-06-22 20:06:24,424] INFO main:199 - llm_model_name                                    : mistral-7b-instruct-v0.1.Q3_K_M.gguf
+[2025-06-22 20:06:24,424] INFO main:199 - log_level                                         : debug
+[2025-06-22 20:06:24,425] INFO main:199 - raw_input_directory                               : data/raw_input
+[2025-06-22 20:06:24,425] INFO main:199 - retriever_min_score_threshold                     : 0.5
+[2025-06-22 20:06:24,425] INFO main:199 - vectordb_directory                                : data/vectordb
+[2025-06-22 20:06:24,425] INFO main:200 - ------------------------------
+[2025-06-22 20:06:24,425] INFO main:46 - Ensured directory exists: data/raw_input
+[2025-06-22 20:06:24,425] INFO main:46 - Ensured directory exists: data/cleaned_text
+[2025-06-22 20:06:24,425] INFO main:46 - Ensured directory exists: data/embeddings
+[2025-06-22 20:06:24,425] INFO main:46 - Ensured directory exists: data/vectordb
+[2025-06-22 20:06:24,425] INFO main:131 - [Step 05] Response generation started.
+[2025-06-22 20:06:24,425] INFO llm_client:18 - Initialized LLMClient: llm_api_url: http://localhost:1234/v1/completions, model_name: mistral-7b-instruct-v0.1.Q3_K_M.gguf
+[2025-06-22 20:06:24,629] INFO SentenceTransformer:210 - Use pytorch device_name: mps
+[2025-06-22 20:06:24,629] INFO SentenceTransformer:218 - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2025-06-22 20:06:25,535] INFO chromadb_retriever:22 - Initialized ChromaDBRetriever: embedding_model_name: sentence-transformers/all-MiniLM-L6-v2, collection_name: collections, score_threshold: 0
+[2025-06-22 20:06:25,536] INFO rag_query_processor:20 - Initialized RAGQueryProcessor: use_rag: True
+[2025-06-22 20:06:25,536] DEBUG rag_query_processor:181 - Received query: What are some biomarkers of spinocerebellar ataxia
+[2025-06-22 20:06:25,536] INFO rag_query_processor:185 - --------------------------------------------------------------------------------
+[2025-06-22 20:06:25,536] INFO rag_query_processor:186 - Using RAG pipeline (top_k=5)...
+[2025-06-22 20:06:25,828] INFO rag_query_processor:194 - ID: pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_31.txt
+[2025-06-22 20:06:25,828] INFO rag_query_processor:195 - Score: 0.9632
+[2025-06-22 20:06:25,828] INFO rag_query_processor:197 - Document: 
+[2025-06-22 20:06:25,828] INFO rag_query_processor:194 - ID: pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_29.txt
+[2025-06-22 20:06:25,829] INFO rag_query_processor:195 - Score: 1.0102
+[2025-06-22 20:06:25,829] INFO rag_query_processor:197 - Document: 
+[2025-06-22 20:06:25,829] INFO rag_query_processor:194 - ID: pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_25.txt
+[2025-06-22 20:06:25,829] INFO rag_query_processor:195 - Score: 1.0115
+[2025-06-22 20:06:25,829] INFO rag_query_processor:197 - Document: 
+[2025-06-22 20:06:25,829] INFO rag_query_processor:194 - ID: pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_22.txt
+[2025-06-22 20:06:25,829] INFO rag_query_processor:195 - Score: 1.0289
+[2025-06-22 20:06:25,829] INFO rag_query_processor:197 - Document: 
+[2025-06-22 20:06:25,829] INFO rag_query_processor:194 - ID: pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_26.txt
+[2025-06-22 20:06:25,829] INFO rag_query_processor:195 - Score: 1.0822
+[2025-06-22 20:06:25,829] INFO rag_query_processor:197 - Document: 
+[2025-06-22 20:06:25,829] INFO rag_query_processor:198 - --------------------------------------------------------------------------------
+[2025-06-22 20:06:25,829] DEBUG rag_query_processor:222 - Prompt to LLM:
+You are a medical assistant answering questions about Spinocerebellar Ataxia using the context and conversation history provided below.
+    If the context is insufficient, say "I don't know".
+
+    Context:
+    [Doc 1]
+. https : / / doi. org / 1 0. 1 0 0 7 / s 0 0 4 1 5 - 0 1 3 - 7 1 8 9 - 3. vazquez - mojena y, perez - rodriguez r, ziemann u. neurophys53. schniepp r, huppert a, decker j, schenkel f, schlick c, rasoul iological features in spinocerebellar ataxia type 2 : prospects for a, et al. fall prediction in 
+
+[Doc 2]
+/ 1 deelchand dk, et al. clinically meaningful magnetic resonance 0. 1 2 1 2 / w n l. 0 0 0 0 0 0 0 0 0 0 2 0 9 7 4 9. endpoints sensitive to preataxic spinocerebellar ataxia types 1 34. da silva carvalho g, saute jam, haas cb, torrez vr, brochier and 3. ann neurol. 2023 ; 93 : 686 – 701. https : / 
+
+[Doc 3]
+/ 1 0. 1 0 0 2 / m d s. 2 9 3 5 9. nocerebellar ataxia type 3. ann neurol. 2024 ; 95 : 400 – 6. https : / / d39. dengq, tang c, chen z, yuan x, ding z, wang c, et al. o i. o r g / 1 0. 1 0 0 2 / a n a. 2 6 8 2 4. decreased peripheral blood lymphocytes in spinocerebellar 25. du tezenas montcel s, pet
+
+[Doc 4]
+: a retrospective included in the article ’ s creative commons licence and your intended study in 466 patients. brain. 1998 ; 121 : 589 – 600. use is not permitted by statutory regulation or exceeds the permitted 17. jardim lb, hauser l, kieling c, saute ja, xavier r, rieder cr, use, you will need t
+
+[Doc 5]
+serums of sca3 / mjd patients. int j neurosci. 0. 1 0 1 6 / j. n b d. 2 0 2 3. 1 0 6 1 1 2. 2014 ; 124 : 97 – 101. https : / / doi. org / 1 0. 3 1 0 9 / 0 0 2 0 7 4 5 4. 2 0 1 3. 8 2 7 6 7 27. garcia - moreno h, prudencio m, thomas - black g, solanky n, 9. jansen - west kr, hanna al - shaikh r, et a
+
+    Conversation History:
+    None
+
+    Current Question:
+    What are some biomarkers of spinocerebellar ataxia
+
+    Answer:
+[2025-06-22 20:06:58,088] INFO main:150 - [Step 05] Response generation completed.
+[2025-06-22 20:06:58,088] INFO main:213 - RAG pipeline done

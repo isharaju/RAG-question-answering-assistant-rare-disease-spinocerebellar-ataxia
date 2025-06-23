@@ -1,0 +1,358 @@
+[2025-06-22 20:03:41,324] INFO main:192 - ------ Command line arguments -------
+[2025-06-22 20:03:41,324] INFO main:193 - step                                              : step02_generate_embeddings
+[2025-06-22 20:03:41,324] INFO main:194 - input_filename                                    : all
+[2025-06-22 20:03:41,324] INFO main:195 - query_args                                        : None
+[2025-06-22 20:03:41,325] INFO main:196 - use_rag                                           : False
+[2025-06-22 20:03:41,325] INFO main:197 - ------ Config Settings -------
+[2025-06-22 20:03:41,325] INFO main:199 - cleaned_text_directory                            : data/cleaned_text
+[2025-06-22 20:03:41,325] INFO main:199 - collection_name                                   : collections
+[2025-06-22 20:03:41,325] INFO main:199 - embedding_model_name                              : sentence-transformers/all-MiniLM-L6-v2
+[2025-06-22 20:03:41,325] INFO main:199 - embeddings_directory                              : data/embeddings
+[2025-06-22 20:03:41,325] INFO main:199 - llm_api_url                                       : http://localhost:1234/v1/completions
+[2025-06-22 20:03:41,325] INFO main:199 - llm_model_name                                    : mistral-7b-instruct-v0.1.Q3_K_M.gguf
+[2025-06-22 20:03:41,325] INFO main:199 - log_level                                         : debug
+[2025-06-22 20:03:41,325] INFO main:199 - raw_input_directory                               : data/raw_input
+[2025-06-22 20:03:41,325] INFO main:199 - retriever_min_score_threshold                     : 0.5
+[2025-06-22 20:03:41,325] INFO main:199 - vectordb_directory                                : data/vectordb
+[2025-06-22 20:03:41,325] INFO main:200 - ------------------------------
+[2025-06-22 20:03:41,325] INFO main:46 - Ensured directory exists: data/raw_input
+[2025-06-22 20:03:41,326] INFO main:46 - Ensured directory exists: data/cleaned_text
+[2025-06-22 20:03:41,326] INFO main:46 - Ensured directory exists: data/embeddings
+[2025-06-22 20:03:41,326] INFO main:46 - Ensured directory exists: data/vectordb
+[2025-06-22 20:03:41,326] INFO main:64 - [Step 02] Embedding generation started.
+[2025-06-22 20:03:41,987] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_53.txt
+[2025-06-22 20:03:42,329] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_53_embeddings.json
+[2025-06-22 20:03:42,330] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_47.txt
+[2025-06-22 20:03:42,408] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_47_embeddings.json
+[2025-06-22 20:03:42,408] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_17.txt
+[2025-06-22 20:03:42,476] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_17_embeddings.json
+[2025-06-22 20:03:42,476] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_29.txt
+[2025-06-22 20:03:42,535] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_29_embeddings.json
+[2025-06-22 20:03:42,535] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_15.txt
+[2025-06-22 20:03:42,594] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_15_embeddings.json
+[2025-06-22 20:03:42,594] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_8.txt
+[2025-06-22 20:03:42,653] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_8_embeddings.json
+[2025-06-22 20:03:42,653] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_6.txt
+[2025-06-22 20:03:42,712] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_6_embeddings.json
+[2025-06-22 20:03:42,713] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_7.txt
+[2025-06-22 20:03:42,771] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_7_embeddings.json
+[2025-06-22 20:03:42,771] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_9.txt
+[2025-06-22 20:03:42,828] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_9_embeddings.json
+[2025-06-22 20:03:42,828] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_14.txt
+[2025-06-22 20:03:42,887] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_14_embeddings.json
+[2025-06-22 20:03:42,887] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_28.txt
+[2025-06-22 20:03:42,944] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_28_embeddings.json
+[2025-06-22 20:03:42,944] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_16.txt
+[2025-06-22 20:03:43,004] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_16_embeddings.json
+[2025-06-22 20:03:43,004] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_46.txt
+[2025-06-22 20:03:43,064] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_46_embeddings.json
+[2025-06-22 20:03:43,064] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_52.txt
+[2025-06-22 20:03:43,127] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_52_embeddings.json
+[2025-06-22 20:03:43,127] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_44.txt
+[2025-06-22 20:03:43,185] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_44_embeddings.json
+[2025-06-22 20:03:43,185] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_50.txt
+[2025-06-22 20:03:43,240] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_50_embeddings.json
+[2025-06-22 20:03:43,240] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_14.txt
+[2025-06-22 20:03:43,300] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_14_embeddings.json
+[2025-06-22 20:03:43,300] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_16.txt
+[2025-06-22 20:03:43,364] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_16_embeddings.json
+[2025-06-22 20:03:43,364] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_5.txt
+[2025-06-22 20:03:43,424] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_5_embeddings.json
+[2025-06-22 20:03:43,424] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_4.txt
+[2025-06-22 20:03:43,482] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_4_embeddings.json
+[2025-06-22 20:03:43,482] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_17.txt
+[2025-06-22 20:03:43,541] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_17_embeddings.json
+[2025-06-22 20:03:43,542] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_15.txt
+[2025-06-22 20:03:43,600] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_15_embeddings.json
+[2025-06-22 20:03:43,600] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_51.txt
+[2025-06-22 20:03:43,663] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_51_embeddings.json
+[2025-06-22 20:03:43,663] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_45.txt
+[2025-06-22 20:03:43,717] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_45_embeddings.json
+[2025-06-22 20:03:43,717] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_41.txt
+[2025-06-22 20:03:43,774] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_41_embeddings.json
+[2025-06-22 20:03:43,774] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_55.txt
+[2025-06-22 20:03:43,829] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_55_embeddings.json
+[2025-06-22 20:03:43,829] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_11.txt
+[2025-06-22 20:03:43,891] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_11_embeddings.json
+[2025-06-22 20:03:43,891] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_13.txt
+[2025-06-22 20:03:43,947] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_13_embeddings.json
+[2025-06-22 20:03:43,948] INFO embedding_preparer:39 - Processing: data/cleaned_text/.DS_Store
+[2025-06-22 20:03:43,948] ERROR embedding_preparer:44 - Error processing data/cleaned_text/.DS_Store: 'utf-8' codec can't decode byte 0x80 in position 3131: invalid start byte
+[2025-06-22 20:03:43,948] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_1.txt
+[2025-06-22 20:03:44,003] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_1_embeddings.json
+[2025-06-22 20:03:44,003] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_12.txt
+[2025-06-22 20:03:44,059] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_12_embeddings.json
+[2025-06-22 20:03:44,059] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_10.txt
+[2025-06-22 20:03:44,119] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_10_embeddings.json
+[2025-06-22 20:03:44,119] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_54.txt
+[2025-06-22 20:03:44,172] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_54_embeddings.json
+[2025-06-22 20:03:44,172] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_40.txt
+[2025-06-22 20:03:44,226] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_40_embeddings.json
+[2025-06-22 20:03:44,226] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_56.txt
+[2025-06-22 20:03:44,279] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_56_embeddings.json
+[2025-06-22 20:03:44,280] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_42.txt
+[2025-06-22 20:03:44,334] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_42_embeddings.json
+[2025-06-22 20:03:44,335] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_12.txt
+[2025-06-22 20:03:44,389] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_12_embeddings.json
+[2025-06-22 20:03:44,389] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_10.txt
+[2025-06-22 20:03:44,442] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_10_embeddings.json
+[2025-06-22 20:03:44,442] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_3.txt
+[2025-06-22 20:03:44,496] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_3_embeddings.json
+[2025-06-22 20:03:44,496] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_2.txt
+[2025-06-22 20:03:44,555] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_2_embeddings.json
+[2025-06-22 20:03:44,555] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_11.txt
+[2025-06-22 20:03:44,608] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_11_embeddings.json
+[2025-06-22 20:03:44,608] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_13.txt
+[2025-06-22 20:03:44,665] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_13_embeddings.json
+[2025-06-22 20:03:44,666] INFO embedding_preparer:39 - Processing: data/cleaned_text/On Stupidity in Project Management_chunk_1.txt
+[2025-06-22 20:03:44,712] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/On Stupidity in Project Management_chunk_1_embeddings.json
+[2025-06-22 20:03:44,712] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_43.txt
+[2025-06-22 20:03:44,768] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_43_embeddings.json
+[2025-06-22 20:03:44,768] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_57.txt
+[2025-06-22 20:03:44,820] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_57_embeddings.json
+[2025-06-22 20:03:44,820] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_18.txt
+[2025-06-22 20:03:44,873] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_18_embeddings.json
+[2025-06-22 20:03:44,873] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_30.txt
+[2025-06-22 20:03:44,927] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_30_embeddings.json
+[2025-06-22 20:03:44,927] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_24.txt
+[2025-06-22 20:03:45,028] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_24_embeddings.json
+[2025-06-22 20:03:45,028] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_9.txt
+[2025-06-22 20:03:45,082] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_9_embeddings.json
+[2025-06-22 20:03:45,082] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_6.txt
+[2025-06-22 20:03:45,150] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_6_embeddings.json
+[2025-06-22 20:03:45,150] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_19.txt
+[2025-06-22 20:03:45,213] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_19_embeddings.json
+[2025-06-22 20:03:45,213] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_31.txt
+[2025-06-22 20:03:45,270] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_31_embeddings.json
+[2025-06-22 20:03:45,270] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_25.txt
+[2025-06-22 20:03:45,325] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_25_embeddings.json
+[2025-06-22 20:03:45,325] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_24.txt
+[2025-06-22 20:03:45,380] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_24_embeddings.json
+[2025-06-22 20:03:45,380] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf3_Misdiagnosis_Case_Report_chunk_1.txt
+[2025-06-22 20:03:45,434] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf3_Misdiagnosis_Case_Report_chunk_1_embeddings.json
+[2025-06-22 20:03:45,434] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_30.txt
+[2025-06-22 20:03:45,488] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_30_embeddings.json
+[2025-06-22 20:03:45,488] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_18.txt
+[2025-06-22 20:03:45,540] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_18_embeddings.json
+[2025-06-22 20:03:45,540] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_7.txt
+[2025-06-22 20:03:45,594] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_7_embeddings.json
+[2025-06-22 20:03:45,594] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_8.txt
+[2025-06-22 20:03:45,654] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_8_embeddings.json
+[2025-06-22 20:03:45,654] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_25.txt
+[2025-06-22 20:03:45,707] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_25_embeddings.json
+[2025-06-22 20:03:45,707] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_31.txt
+[2025-06-22 20:03:45,758] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_31_embeddings.json
+[2025-06-22 20:03:45,758] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_19.txt
+[2025-06-22 20:03:45,812] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_19_embeddings.json
+[2025-06-22 20:03:45,812] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_27.txt
+[2025-06-22 20:03:45,863] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_27_embeddings.json
+[2025-06-22 20:03:45,863] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_33.txt
+[2025-06-22 20:03:45,918] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_33_embeddings.json
+[2025-06-22 20:03:45,918] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_5.txt
+[2025-06-22 20:03:45,970] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_5_embeddings.json
+[2025-06-22 20:03:45,970] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf3_Misdiagnosis_Case_Report_chunk_3.txt
+[2025-06-22 20:03:46,024] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf3_Misdiagnosis_Case_Report_chunk_3_embeddings.json
+[2025-06-22 20:03:46,024] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_26.txt
+[2025-06-22 20:03:46,077] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_26_embeddings.json
+[2025-06-22 20:03:46,077] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_32.txt
+[2025-06-22 20:03:46,134] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_32_embeddings.json
+[2025-06-22 20:03:46,135] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_33.txt
+[2025-06-22 20:03:46,187] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_33_embeddings.json
+[2025-06-22 20:03:46,187] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf3_Misdiagnosis_Case_Report_chunk_2.txt
+[2025-06-22 20:03:46,237] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf3_Misdiagnosis_Case_Report_chunk_2_embeddings.json
+[2025-06-22 20:03:46,237] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_27.txt
+[2025-06-22 20:03:46,288] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_27_embeddings.json
+[2025-06-22 20:03:46,288] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_4.txt
+[2025-06-22 20:03:46,338] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_4_embeddings.json
+[2025-06-22 20:03:46,339] INFO embedding_preparer:39 - Processing: data/cleaned_text/Seven Failure Points When Engineering a Retrieval Augmented Generation System_chunk_1.txt
+[2025-06-22 20:03:46,381] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/Seven Failure Points When Engineering a Retrieval Augmented Generation System_chunk_1_embeddings.json
+[2025-06-22 20:03:46,381] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_32.txt
+[2025-06-22 20:03:46,432] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_32_embeddings.json
+[2025-06-22 20:03:46,432] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_26.txt
+[2025-06-22 20:03:46,484] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_26_embeddings.json
+[2025-06-22 20:03:46,484] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_22.txt
+[2025-06-22 20:03:46,537] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_22_embeddings.json
+[2025-06-22 20:03:46,537] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_36.txt
+[2025-06-22 20:03:46,589] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_36_embeddings.json
+[2025-06-22 20:03:46,589] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_23.txt
+[2025-06-22 20:03:46,649] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_23_embeddings.json
+[2025-06-22 20:03:46,649] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf3_Misdiagnosis_Case_Report_chunk_6.txt
+[2025-06-22 20:03:46,701] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf3_Misdiagnosis_Case_Report_chunk_6_embeddings.json
+[2025-06-22 20:03:46,701] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_36.txt
+[2025-06-22 20:03:46,734] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_36_embeddings.json
+[2025-06-22 20:03:46,734] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_22.txt
+[2025-06-22 20:03:46,784] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_22_embeddings.json
+[2025-06-22 20:03:46,784] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf3_Misdiagnosis_Case_Report_chunk_7.txt
+[2025-06-22 20:03:46,810] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf3_Misdiagnosis_Case_Report_chunk_7_embeddings.json
+[2025-06-22 20:03:46,810] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_1.txt
+[2025-06-22 20:03:46,869] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_1_embeddings.json
+[2025-06-22 20:03:46,869] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_37.txt
+[2025-06-22 20:03:46,921] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_37_embeddings.json
+[2025-06-22 20:03:46,922] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_23.txt
+[2025-06-22 20:03:46,979] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_23_embeddings.json
+[2025-06-22 20:03:46,979] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_35.txt
+[2025-06-22 20:03:47,034] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_35_embeddings.json
+[2025-06-22 20:03:47,034] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_21.txt
+[2025-06-22 20:03:47,088] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_21_embeddings.json
+[2025-06-22 20:03:47,088] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_3.txt
+[2025-06-22 20:03:47,149] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_3_embeddings.json
+[2025-06-22 20:03:47,150] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_34.txt
+[2025-06-22 20:03:47,205] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_34_embeddings.json
+[2025-06-22 20:03:47,205] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf3_Misdiagnosis_Case_Report_chunk_5.txt
+[2025-06-22 20:03:47,270] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf3_Misdiagnosis_Case_Report_chunk_5_embeddings.json
+[2025-06-22 20:03:47,270] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_20.txt
+[2025-06-22 20:03:47,320] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_20_embeddings.json
+[2025-06-22 20:03:47,320] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf3_Misdiagnosis_Case_Report_chunk_4.txt
+[2025-06-22 20:03:47,389] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf3_Misdiagnosis_Case_Report_chunk_4_embeddings.json
+[2025-06-22 20:03:47,389] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_21.txt
+[2025-06-22 20:03:47,457] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_21_embeddings.json
+[2025-06-22 20:03:47,457] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_35.txt
+[2025-06-22 20:03:47,511] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_35_embeddings.json
+[2025-06-22 20:03:47,511] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_2.txt
+[2025-06-22 20:03:47,566] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_2_embeddings.json
+[2025-06-22 20:03:47,566] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_20.txt
+[2025-06-22 20:03:47,618] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_20_embeddings.json
+[2025-06-22 20:03:47,618] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_34.txt
+[2025-06-22 20:03:47,679] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_34_embeddings.json
+[2025-06-22 20:03:47,679] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_39.txt
+[2025-06-22 20:03:47,731] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_39_embeddings.json
+[2025-06-22 20:03:47,731] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_11.txt
+[2025-06-22 20:03:47,783] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_11_embeddings.json
+[2025-06-22 20:03:47,783] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_10.txt
+[2025-06-22 20:03:47,837] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_10_embeddings.json
+[2025-06-22 20:03:47,837] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_11.txt
+[2025-06-22 20:03:47,887] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_11_embeddings.json
+[2025-06-22 20:03:47,887] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_1.txt
+[2025-06-22 20:03:47,940] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_1_embeddings.json
+[2025-06-22 20:03:47,941] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_10.txt
+[2025-06-22 20:03:47,992] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_10_embeddings.json
+[2025-06-22 20:03:47,992] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_38.txt
+[2025-06-22 20:03:48,049] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_38_embeddings.json
+[2025-06-22 20:03:48,049] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_12.txt
+[2025-06-22 20:03:48,101] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_12_embeddings.json
+[2025-06-22 20:03:48,101] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_3.txt
+[2025-06-22 20:03:48,206] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_3_embeddings.json
+[2025-06-22 20:03:48,206] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_13.txt
+[2025-06-22 20:03:48,258] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_13_embeddings.json
+[2025-06-22 20:03:48,258] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_12.txt
+[2025-06-22 20:03:48,312] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_12_embeddings.json
+[2025-06-22 20:03:48,312] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_2.txt
+[2025-06-22 20:03:48,368] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_2_embeddings.json
+[2025-06-22 20:03:48,369] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_13.txt
+[2025-06-22 20:03:48,422] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_13_embeddings.json
+[2025-06-22 20:03:48,422] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_17.txt
+[2025-06-22 20:03:48,476] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_17_embeddings.json
+[2025-06-22 20:03:48,476] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_6.txt
+[2025-06-22 20:03:48,535] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_6_embeddings.json
+[2025-06-22 20:03:48,535] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_9.txt
+[2025-06-22 20:03:48,589] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_9_embeddings.json
+[2025-06-22 20:03:48,589] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_16.txt
+[2025-06-22 20:03:48,646] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_16_embeddings.json
+[2025-06-22 20:03:48,646] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_17.txt
+[2025-06-22 20:03:48,710] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_17_embeddings.json
+[2025-06-22 20:03:48,710] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_8.txt
+[2025-06-22 20:03:48,762] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_8_embeddings.json
+[2025-06-22 20:03:48,762] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_7.txt
+[2025-06-22 20:03:48,814] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_7_embeddings.json
+[2025-06-22 20:03:48,814] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_16.txt
+[2025-06-22 20:03:48,869] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_16_embeddings.json
+[2025-06-22 20:03:48,870] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_14.txt
+[2025-06-22 20:03:48,920] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_14_embeddings.json
+[2025-06-22 20:03:48,921] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_28.txt
+[2025-06-22 20:03:48,976] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_28_embeddings.json
+[2025-06-22 20:03:48,976] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_5.txt
+[2025-06-22 20:03:49,048] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_5_embeddings.json
+[2025-06-22 20:03:49,048] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_15.txt
+[2025-06-22 20:03:49,105] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_15_embeddings.json
+[2025-06-22 20:03:49,105] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_29.txt
+[2025-06-22 20:03:49,160] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_29_embeddings.json
+[2025-06-22 20:03:49,160] INFO embedding_preparer:39 - Processing: data/cleaned_text/Beyond the Spreadsheets_ Quality Project Management-1_chunk_1.txt
+[2025-06-22 20:03:49,207] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/Beyond the Spreadsheets_ Quality Project Management-1_chunk_1_embeddings.json
+[2025-06-22 20:03:49,207] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_28.txt
+[2025-06-22 20:03:49,268] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_28_embeddings.json
+[2025-06-22 20:03:49,268] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_14.txt
+[2025-06-22 20:03:49,328] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf4_Molecular_Landscape_Hereditary_Ataxia_chunk_14_embeddings.json
+[2025-06-22 20:03:49,329] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_4.txt
+[2025-06-22 20:03:49,392] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_4_embeddings.json
+[2025-06-22 20:03:49,392] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_29.txt
+[2025-06-22 20:03:49,449] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_29_embeddings.json
+[2025-06-22 20:03:49,449] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_15.txt
+[2025-06-22 20:03:49,506] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_15_embeddings.json
+[2025-06-22 20:03:49,506] INFO embedding_preparer:39 - Processing: data/cleaned_text/Creating Business Domain Concepts in Regional Projects_ In the Case of Japan-1_chunk_1.txt
+[2025-06-22 20:03:49,552] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/Creating Business Domain Concepts in Regional Projects_ In the Case of Japan-1_chunk_1_embeddings.json
+[2025-06-22 20:03:49,553] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_22.txt
+[2025-06-22 20:03:49,611] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_22_embeddings.json
+[2025-06-22 20:03:49,611] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_20.txt
+[2025-06-22 20:03:49,673] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_20_embeddings.json
+[2025-06-22 20:03:49,674] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_34.txt
+[2025-06-22 20:03:49,732] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_34_embeddings.json
+[2025-06-22 20:03:49,732] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_1.txt
+[2025-06-22 20:03:49,787] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_1_embeddings.json
+[2025-06-22 20:03:49,787] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_35.txt
+[2025-06-22 20:03:49,842] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_35_embeddings.json
+[2025-06-22 20:03:49,842] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_21.txt
+[2025-06-22 20:03:49,898] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_21_embeddings.json
+[2025-06-22 20:03:49,898] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_23.txt
+[2025-06-22 20:03:49,922] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_23_embeddings.json
+[2025-06-22 20:03:49,922] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_59.txt
+[2025-06-22 20:03:49,981] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_59_embeddings.json
+[2025-06-22 20:03:49,981] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_21.txt
+[2025-06-22 20:03:50,037] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_21_embeddings.json
+[2025-06-22 20:03:50,037] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_23.txt
+[2025-06-22 20:03:50,091] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_23_embeddings.json
+[2025-06-22 20:03:50,091] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_2.txt
+[2025-06-22 20:03:50,145] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_2_embeddings.json
+[2025-06-22 20:03:50,145] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_3.txt
+[2025-06-22 20:03:50,208] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_3_embeddings.json
+[2025-06-22 20:03:50,208] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_22.txt
+[2025-06-22 20:03:50,265] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_22_embeddings.json
+[2025-06-22 20:03:50,265] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_36.txt
+[2025-06-22 20:03:50,291] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_36_embeddings.json
+[2025-06-22 20:03:50,291] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_20.txt
+[2025-06-22 20:03:50,351] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_20_embeddings.json
+[2025-06-22 20:03:50,352] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_58.txt
+[2025-06-22 20:03:50,408] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_58_embeddings.json
+[2025-06-22 20:03:50,408] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_60.txt
+[2025-06-22 20:03:50,430] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_60_embeddings.json
+[2025-06-22 20:03:50,430] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_48.txt
+[2025-06-22 20:03:50,487] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_48_embeddings.json
+[2025-06-22 20:03:50,487] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_18.txt
+[2025-06-22 20:03:50,540] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_18_embeddings.json
+[2025-06-22 20:03:50,540] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_32.txt
+[2025-06-22 20:03:50,594] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_32_embeddings.json
+[2025-06-22 20:03:50,594] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_26.txt
+[2025-06-22 20:03:50,647] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_26_embeddings.json
+[2025-06-22 20:03:50,647] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_7.txt
+[2025-06-22 20:03:50,712] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_7_embeddings.json
+[2025-06-22 20:03:50,712] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_9.txt
+[2025-06-22 20:03:50,766] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_9_embeddings.json
+[2025-06-22 20:03:50,766] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_8.txt
+[2025-06-22 20:03:50,818] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_8_embeddings.json
+[2025-06-22 20:03:50,818] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_6.txt
+[2025-06-22 20:03:50,871] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_6_embeddings.json
+[2025-06-22 20:03:50,871] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_27.txt
+[2025-06-22 20:03:50,923] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_27_embeddings.json
+[2025-06-22 20:03:50,923] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_33.txt
+[2025-06-22 20:03:50,978] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_33_embeddings.json
+[2025-06-22 20:03:50,978] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_19.txt
+[2025-06-22 20:03:51,032] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China_chunk_19_embeddings.json
+[2025-06-22 20:03:51,032] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_49.txt
+[2025-06-22 20:03:51,086] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina_chunk_49_embeddings.json
+[2025-06-22 20:03:51,087] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_25.txt
+[2025-06-22 20:03:51,140] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_25_embeddings.json
+[2025-06-22 20:03:51,140] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_31.txt
+[2025-06-22 20:03:51,206] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_31_embeddings.json
+[2025-06-22 20:03:51,206] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_19.txt
+[2025-06-22 20:03:51,258] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_19_embeddings.json
+[2025-06-22 20:03:51,258] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_4.txt
+[2025-06-22 20:03:51,313] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_4_embeddings.json
+[2025-06-22 20:03:51,313] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_5.txt
+[2025-06-22 20:03:51,369] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_5_embeddings.json
+[2025-06-22 20:03:51,369] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_18.txt
+[2025-06-22 20:03:51,424] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_18_embeddings.json
+[2025-06-22 20:03:51,424] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_30.txt
+[2025-06-22 20:03:51,479] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_30_embeddings.json
+[2025-06-22 20:03:51,479] INFO embedding_preparer:39 - Processing: data/cleaned_text/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_24.txt
+[2025-06-22 20:03:51,533] INFO embedding_preparer:63 - Saved embeddings to data/embeddings/pdf1_Biomarkers_in_Spinocerebellar_Ataxias_chunk_24_embeddings.json
+[2025-06-22 20:03:51,534] INFO main:73 - [Step 02] Embedding generation completed.
+[2025-06-22 20:03:51,543] INFO main:213 - RAG pipeline done

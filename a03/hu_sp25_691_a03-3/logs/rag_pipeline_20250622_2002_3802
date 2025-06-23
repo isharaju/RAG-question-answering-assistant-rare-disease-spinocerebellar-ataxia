@@ -1,0 +1,46 @@
+[2025-06-22 20:02:38,020] INFO main:192 - ------ Command line arguments -------
+[2025-06-22 20:02:38,020] INFO main:193 - step                                              : step01_ingest
+[2025-06-22 20:02:38,020] INFO main:194 - input_filename                                    : all
+[2025-06-22 20:02:38,020] INFO main:195 - query_args                                        : None
+[2025-06-22 20:02:38,021] INFO main:196 - use_rag                                           : False
+[2025-06-22 20:02:38,021] INFO main:197 - ------ Config Settings -------
+[2025-06-22 20:02:38,021] INFO main:199 - cleaned_text_directory                            : data/cleaned_text
+[2025-06-22 20:02:38,021] INFO main:199 - collection_name                                   : collections
+[2025-06-22 20:02:38,021] INFO main:199 - embedding_model_name                              : sentence-transformers/all-MiniLM-L6-v2
+[2025-06-22 20:02:38,021] INFO main:199 - embeddings_directory                              : data/embeddings
+[2025-06-22 20:02:38,021] INFO main:199 - llm_api_url                                       : http://localhost:1234/v1/completions
+[2025-06-22 20:02:38,021] INFO main:199 - llm_model_name                                    : mistral-7b-instruct-v0.1.Q3_K_M.gguf
+[2025-06-22 20:02:38,021] INFO main:199 - log_level                                         : debug
+[2025-06-22 20:02:38,021] INFO main:199 - raw_input_directory                               : data/raw_input
+[2025-06-22 20:02:38,021] INFO main:199 - retriever_min_score_threshold                     : 0.5
+[2025-06-22 20:02:38,021] INFO main:199 - vectordb_directory                                : data/vectordb
+[2025-06-22 20:02:38,021] INFO main:200 - ------------------------------
+[2025-06-22 20:02:38,021] INFO main:46 - Ensured directory exists: data/raw_input
+[2025-06-22 20:02:38,022] INFO main:46 - Ensured directory exists: data/cleaned_text
+[2025-06-22 20:02:38,022] INFO main:46 - Ensured directory exists: data/embeddings
+[2025-06-22 20:02:38,022] INFO main:46 - Ensured directory exists: data/vectordb
+[2025-06-22 20:02:38,022] INFO main:51 - [Step 01] Document ingestion started.
+[2025-06-22 20:02:38,241] INFO document_ingestor:30 - Initialized DocumentIngestor: input_dir: data/raw_inputoutput_dir: data/cleaned_text, embedding_model_name: sentence-transformers/all-MiniLM-L6-v2
+[2025-06-22 20:02:38,241] INFO document_ingestor:32 - Tokenizer max length: 512
+[2025-06-22 20:02:38,241] INFO document_ingestor:123 - Processing file: data/raw_input/Seven Failure Points When Engineering a Retrieval Augmented Generation System.pdf
+[2025-06-22 20:02:38,453] INFO document_ingestor:146 - Saved 1 chunks for Seven Failure Points When Engineering a Retrieval Augmented Generation System.pdf
+[2025-06-22 20:02:38,455] INFO document_ingestor:123 - Processing file: data/raw_input/pdf1_Biomarkers_in_Spinocerebellar_Ataxias.pdf
+[2025-06-22 20:02:41,231] INFO document_ingestor:146 - Saved 36 chunks for pdf1_Biomarkers_in_Spinocerebellar_Ataxias.pdf
+[2025-06-22 20:02:41,231] INFO document_ingestor:123 - Processing file: data/raw_input/On Stupidity in Project Management.pdf
+[2025-06-22 20:02:41,473] INFO document_ingestor:146 - Saved 1 chunks for On Stupidity in Project Management.pdf
+[2025-06-22 20:02:41,473] INFO document_ingestor:123 - Processing file: data/raw_input/.DS_Store
+[2025-06-22 20:02:41,473] WARNING document_ingestor:130 - Unsupported file type: 
+[2025-06-22 20:02:41,474] INFO document_ingestor:123 - Processing file: data/raw_input/pdf5_Therapeutic_Effects_of_Hemerocallis_citrina.pdf
+[2025-06-22 20:02:44,943] INFO document_ingestor:146 - Saved 60 chunks for pdf5_Therapeutic_Effects_of_Hemerocallis_citrina.pdf
+[2025-06-22 20:02:44,943] INFO document_ingestor:123 - Processing file: data/raw_input/pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China.pdf
+[2025-06-22 20:02:46,700] INFO document_ingestor:146 - Saved 23 chunks for pdf2_Incidence_and_health_burden_of_20_rare_neurological_diseases_in_South_China.pdf
+[2025-06-22 20:02:46,701] INFO document_ingestor:123 - Processing file: data/raw_input/Creating Business Domain Concepts in Regional Projects_ In the Case of Japan-1.pdf
+[2025-06-22 20:02:46,928] INFO document_ingestor:146 - Saved 1 chunks for Creating Business Domain Concepts in Regional Projects_ In the Case of Japan-1.pdf
+[2025-06-22 20:02:46,928] INFO document_ingestor:123 - Processing file: data/raw_input/pdf4_Molecular_Landscape_Hereditary_Ataxia.pdf
+[2025-06-22 20:02:49,591] INFO document_ingestor:146 - Saved 36 chunks for pdf4_Molecular_Landscape_Hereditary_Ataxia.pdf
+[2025-06-22 20:02:49,591] INFO document_ingestor:123 - Processing file: data/raw_input/pdf3_Misdiagnosis_Case_Report.pdf
+[2025-06-22 20:02:50,059] INFO document_ingestor:146 - Saved 7 chunks for pdf3_Misdiagnosis_Case_Report.pdf
+[2025-06-22 20:02:50,060] INFO document_ingestor:123 - Processing file: data/raw_input/Beyond the Spreadsheets_ Quality Project Management-1.pdf
+[2025-06-22 20:02:50,250] INFO document_ingestor:146 - Saved 1 chunks for Beyond the Spreadsheets_ Quality Project Management-1.pdf
+[2025-06-22 20:02:50,250] INFO main:60 - [Step 01] Document ingestion completed.
+[2025-06-22 20:02:50,257] INFO main:213 - RAG pipeline done
